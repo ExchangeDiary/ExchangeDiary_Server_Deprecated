@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.0.23
+    restart: always
+    ports:
+      - 3306:3306
+    volumes:
+      - ./db-data:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=voda1234
+      - MYSQL_DATABASE=voda
