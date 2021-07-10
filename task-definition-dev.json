@@ -20,5 +20,5 @@
   "family": "voda-server-dev",
   "requiresCompatibilities": [
     "EC2"
-  ],
+  ]
 }
