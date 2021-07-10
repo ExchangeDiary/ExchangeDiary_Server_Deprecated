@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common'
 import { TypeOrmModule } from '@nestjs/typeorm'
 
 import { AppController } from './app.controller'
-import { UserModule } from './user/user.module';
+import { UserModule } from './user/user.module'
 import databaseOptions from './ormconfig'
 
 @Module({
