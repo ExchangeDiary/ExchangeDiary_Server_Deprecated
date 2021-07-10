@@ -1,0 +1,24 @@
+{
+  "containerDefinitions": [
+    {
+      "portMappings": [
+        {
+          "hostPort": 0,
+          "protocol": "tcp",
+          "containerPort": 3000
+        }
+      ],
+      "environment": [],
+      "secrets": [],
+      "memory": 256,
+      "memoryReservation": 128,
+      "image": "482417296915.dkr.ecr.ap-northeast-2.amazonaws.com/voda-server:latest",
+      "name": "voda-server"
+    }
+  ],
+  "placementConstraints": [],
+  "family": "voda-server-dev",
+  "requiresCompatibilities": [
+    "EC2"
+  ],
+}
