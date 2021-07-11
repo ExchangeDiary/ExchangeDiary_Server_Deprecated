@@ -94,8 +94,8 @@ jobs:
 
     - name: Wait for migration
       run: |
-        aws ecs wait tasks-stopped --cluster voda-dev --tasks ${{ steps.run-migration.outputs.MIGRATION_TASK_ARN }}
+        aws ecs wait tasks-stopped --cluster voda --tasks ${{ steps.run-migration.outputs.MIGRATION_TASK_ARN }}
 
     - name: Update ECS Service
       run: |
-        aws ecs update-service --cluster voda-dev --service voda-server-dev --task-definition ${{ steps.register-task-def.outputs.TASK_DEF_ARN }} --force-new-deployment
+        aws ecs update-service --cluster voda --service voda-server-dev --task-definition ${{ steps.register-task-def.outputs.TASK_DEF_ARN }} --force-new-deployment
