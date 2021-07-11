@@ -1,6 +1,15 @@
 {
+  "executionRoleArn": "arn:aws:iam::482417296915:role/ecs-roleg",
   "containerDefinitions": [
     {
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "/ecs/voda-server-dev",
+          "awslogs-region": "ap-northeast-2",
+          "awslogs-stream-prefix": "ecs"
+        }
+      },
       "portMappings": [
         {
           "hostPort": 0,
