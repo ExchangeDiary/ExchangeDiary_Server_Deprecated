@@ -88,7 +88,7 @@ jobs:
     - name: Run migration
       id: run-migration
       run: |
-        TASKS=$(aws ecs run-task --cluster voda-dev --count 1 --task-definition ${{ steps.register-task-def.outputs.TASK_DEF_ARN }} --overrides '{ "containerOverrides": [{ "name": "voda-server", "command": ["npm", "run", "migrate:prod"] }] }')
+        TASKS=$(aws ecs run-task --cluster voda --count 1 --task-definition ${{ steps.register-task-def.outputs.TASK_DEF_ARN }} --overrides '{ "containerOverrides": [{ "name": "voda-server", "command": ["npm", "run", "migrate:prod"] }] }')
         MIGRATION_TASK_ARN=$(echo $TASKS | jq '.tasks[0].taskArn')
         echo "::set-output name=MIGRATION_TASK_ARN::$MIGRATION_TASK_ARN"
 

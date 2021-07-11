@@ -8,8 +8,15 @@
           "containerPort": 3000
         }
       ],
-      "environment": [],
-      "secrets": [],
+      "environment": [
+        { "name": "DATABASE_PORT", "value":  "3306" },
+        { "name": "DATABASE_USERNAME", "value":  "admin" },
+        { "name": "DATABASE_NAME", "value":  "voda" }
+      ],
+      "secrets": [
+        { "name": "DATABASE_HOST", "valueFrom": "arn:aws:ssm:ap-northeast-2:482417296915:parameter/dev-voda-db-host" },
+        { "name": "DATABASE_PASSWORD", "valueFrom":  "arn:aws:ssm:ap-northeast-2:482417296915:parameter/dev-voda-db-password" }
+      ],
       "memory": 256,
       "memoryReservation": 128,
       "image": "482417296915.dkr.ecr.ap-northeast-2.amazonaws.com/voda-server:latest",
