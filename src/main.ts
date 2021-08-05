@@ -9,7 +9,7 @@ async function bootstrap() {
   app.useGlobalPipes(
     new ValidationPipe({
       transform: true,
-      disableErrorMessages: true,
+      // disableErrorMessages: true,
     }),
   )
 

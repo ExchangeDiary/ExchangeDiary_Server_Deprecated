@@ -17,6 +17,11 @@ export class UserRepository extends AbstractRepository<UserEntity> {
     return this.repository.find()
   }
 
+  // TODO : 임시로 쓰는 함수
+  findRandomUser(): Promise<UserEntity | undefined> {
+    return this.repository.findOne()
+  }
+
   static toUserView(entity: UserEntity): UserDto {
     return {
       id: entity.id,
