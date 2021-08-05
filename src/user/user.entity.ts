@@ -7,6 +7,9 @@ export class UserEntity {
   @PrimaryGeneratedColumn('uuid')
   id: string
 
-  @Column()
+  @Column({ type: 'varchar' })
   name: string
+
+  @Column({ type: 'varchar', nullable: true })
+  profile_image_url: string | null
 }
