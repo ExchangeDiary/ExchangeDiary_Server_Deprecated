@@ -28,6 +28,5 @@ export class DiaryDto {
   theme: string
   title: string
   interval: number
-  invitationCode: string
   invitationCodeHint: string
 }

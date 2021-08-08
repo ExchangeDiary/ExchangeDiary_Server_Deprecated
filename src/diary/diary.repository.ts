@@ -35,7 +35,6 @@ export class DiaryRepository extends AbstractRepository<DiaryEntity> {
       theme: entity.theme,
       title: entity.title,
       interval: entity.interval,
-      invitationCode: entity.invitation_code,
       invitationCodeHint: entity.invitation_code_hint,
     }
   }
