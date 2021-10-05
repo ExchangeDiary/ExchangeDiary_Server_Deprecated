@@ -50,4 +50,4 @@ nest g service <name>
 
 * ~~v0.0.0-prod 형태의 release를 생성하면 prod에 배포~~ (아직 prod는 연결 안함)
 
-* dev base url : https://dev.api.voda-diary.com
+* dev base url : https://dev.api.voda-diary.com (수정 예정)
