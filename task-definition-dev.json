@@ -23,8 +23,8 @@
         { "name": "DATABASE_NAME", "value":  "voda" }
       ],
       "secrets": [
-        { "name": "DATABASE_HOST", "valueFrom": "arn:aws:ssm:ap-northeast-2:482417296915:parameter/dev-voda-db-host" },
-        { "name": "DATABASE_PASSWORD", "valueFrom":  "arn:aws:ssm:ap-northeast-2:482417296915:parameter/dev-voda-db-password" }
+        { "name": "DATABASE_HOST", "valueFrom": "arn:aws:ssm:ap-northeast-2:739354185612:parameter/dev-voda-db-host" },
+        { "name": "DATABASE_PASSWORD", "valueFrom":  "arn:aws:ssm:ap-northeast-2:739354185612:parameter/dev-voda-db-password" }
       ],
       "memory": 256,
       "memoryReservation": 128,
